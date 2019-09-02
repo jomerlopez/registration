@@ -35,10 +35,10 @@
       </div>
     <?php endif ?>
 
-    <!-- logged in user information -->
+    <!-- information ng naglogin -->
     <?php  if (isset($_SESSION['username'])) : ?>
       <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-      <p>Click here to <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+      <p>Click here to <a href="index.php?logout='1'" style="color: red;">Logout</a> </p>
     <?php endif ?>
 </div>
     

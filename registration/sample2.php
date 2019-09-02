@@ -1,3 +1,12 @@
+<?php
+if (isset($_POST['submit'])) {
+if(isset($_POST['radio']))
+{
+echo "<span>You have selected :<b> ".$_POST['radio']."</b></span>";
+}
+else{ echo "<span>Please choose any radio button.</span>";}
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -10,13 +19,12 @@
     
 
 body {
-    background-attachment: fixed; 
-    background-size: cover;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    color: black;
+    
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    background-color: #d3d3d3;
+
 
 }
 
@@ -29,6 +37,9 @@ body {
     z-index: 1;
     background: inherit;
     overflow: hidden;
+    background-image: url(backg.png);
+    background-position: center;
+
 }
 
 .container:before {
@@ -41,12 +52,13 @@ body {
     right: 0;
     bottom: 0;
     box-shadow: inset 0 0 3000px rgba(255, 255, 255, .01);
-    filter: blur(20px);
+    filter: blur(5px);
     margin: -10px;
 }
 </style>
 </head>
 <body>
+  
  <div class="container">
 	<h1>Evaluation:</h1>
 	<h6>The Instructor Answered questions completely.</h6>
@@ -243,7 +255,7 @@ body {
 <input type="radio" name="ques3" value="4" />Good	
   -->
 <br/><br/>
-<button type="button" class="btn btn-warning btn-lock">Submit</button>
+<button type="button" class="btn btn-warning btn-lock" name="submit">Submit</button>
 </div>
 </div>
 </html>
